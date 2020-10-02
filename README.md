@@ -4,6 +4,7 @@
 ### Estado del código
 [![Build Status](https://travis-ci.org/jordyxt/iwvg-devops-jordy-arrese.svg?branch=develop)](https://travis-ci.org/jordyxt/iwvg-devops-jordy-arrese)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aivwg-devops-jordy-arrese&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aivwg-devops-jordy-arrese)
+[![BCH compliance](https://bettercodehub.com/edge/badge/jordyxt/iwvg-devops-jordy-arrese?branch=master)](https://bettercodehub.com/)
 ### :gear: Instalación del proyecto
 1. Clonar el repositorio en tu equipo, **mediante consola**:
 ```sh
