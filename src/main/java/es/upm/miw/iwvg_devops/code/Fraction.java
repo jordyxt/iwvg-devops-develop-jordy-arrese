@@ -40,7 +40,7 @@ public class Fraction {
     }
 
     public int getNumerator() {
-        return numerator;
+        return this.numerator;
     }
 
     public void setNumerator(int numerator) {
@@ -57,6 +57,24 @@ public class Fraction {
 
     public double decimal() {
         return (double) numerator / denominator;
+    }
+    boolean isProper(){
+        return this.numerator<this.denominator;
+    }
+    boolean isImproper(){
+        return this.numerator>this.denominator;
+    }
+    boolean isEquivalent(Fraction fraction){
+        return this.numerator*fraction.getDenominator() == this.denominator*fraction.getNumerator();
+    }
+    Fraction add(Fraction fraction){
+        return new Fraction(this.numerator*fraction.getDenominator() + this.denominator*fraction.getNumerator(),this.denominator*fraction.getDenominator());
+    }
+    Fraction multiply(Fraction fraction){
+        return new Fraction(this.numerator*fraction.getNumerator(),this.denominator*fraction.getDenominator());
+    }
+    Fraction divide(Fraction fraction){
+        return new Fraction(this.numerator*fraction.getDenominator(), this.denominator*fraction.getNumerator());
     }
 
     @Override
