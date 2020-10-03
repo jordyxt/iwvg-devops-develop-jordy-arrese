@@ -58,23 +58,29 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
-    boolean isProper(){
-        return this.numerator<this.denominator;
+
+    boolean isProper() {
+        return this.numerator < this.denominator;
     }
-    boolean isImproper(){
-        return this.numerator>this.denominator;
+
+    boolean isImproper() {
+        return this.numerator > this.denominator;
     }
-    boolean isEquivalent(Fraction fraction){
-        return this.numerator*fraction.getDenominator() == this.denominator*fraction.getNumerator();
+
+    boolean isEquivalent(Fraction fraction) {
+        return this.numerator * fraction.getDenominator() == this.denominator * fraction.getNumerator();
     }
-    Fraction add(Fraction fraction){
-        return new Fraction(this.numerator*fraction.getDenominator() + this.denominator*fraction.getNumerator(),this.denominator*fraction.getDenominator());
+
+    Fraction add(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getDenominator() + this.denominator * fraction.getNumerator(), this.denominator * fraction.getDenominator());
     }
-    Fraction multiply(Fraction fraction){
-        return new Fraction(this.numerator*fraction.getNumerator(),this.denominator*fraction.getDenominator());
+
+    Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(), this.denominator * fraction.getDenominator());
     }
-    Fraction divide(Fraction fraction){
-        return new Fraction(this.numerator*fraction.getDenominator(), this.denominator*fraction.getNumerator());
+
+    Fraction divide(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getDenominator(), this.denominator * fraction.getNumerator());
     }
 
     @Override
