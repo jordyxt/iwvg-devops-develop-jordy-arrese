@@ -18,4 +18,11 @@ public class Searches {
                         .anyMatch(fraction -> fraction.isImproper()))
                 .map(User::getFamilyName);
     }
+
+    public Fraction findFractionDivisionByUserId(String id) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getId() == id)
+                .flatMap(user -> user.getFractions().stream())
+                .reduce(Fraction::divide).orElse(new Fraction());
+    }
 }
