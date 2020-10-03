@@ -60,11 +60,11 @@ public class Fraction {
     }
 
     boolean isProper() {
-        return this.numerator < this.denominator;
+        return Math.abs(this.numerator) < Math.abs(this.denominator);
     }
 
     boolean isImproper() {
-        return this.numerator > this.denominator;
+        return !this.isProper();
     }
 
     boolean isEquivalent(Fraction fraction) {
