@@ -27,4 +27,11 @@ public class SearchesTest {
         assertEquals(-48, fractionTest.getNumerator());
         assertEquals(60, fractionTest.getDenominator());
     }
+
+    @Test
+    void TestFindFirstProperFractionByUserId() {
+        Fraction fractionTest = new Searches().findFirstProperFractionByUserId("2");
+        assertEquals(-1, fractionTest.getNumerator());
+        assertEquals(5, fractionTest.getDenominator());
+    }
 }
