@@ -20,4 +20,11 @@ public class SearchesTest {
         assertEquals(List.of("Fernandez", "Blanco", "López", "Torres", "Torres"), new Searches().findUserFamilyNameBySomeImproperFraction()
                 .collect(Collectors.toList()));
     }
+
+    @Test
+    void TestFindFractionDivisionByUserId() {
+        Fraction fractionTest = new Searches().findFractionDivisionByUserId("3");
+        assertEquals(-48, fractionTest.getNumerator());
+        assertEquals(60, fractionTest.getDenominator());
+    }
 }
