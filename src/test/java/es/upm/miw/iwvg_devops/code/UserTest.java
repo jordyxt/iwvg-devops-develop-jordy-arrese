@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UserTest {
+class UserTest {
     @Test
     void testUserGetters() {
         User userTest = new User("1", "Jordy", "Arrese", new ArrayList<Fraction>());
@@ -25,6 +25,23 @@ public class UserTest {
 
         assertEquals("Jordy", userTest.getName());
         assertEquals("Arrese", userTest.getFamilyName());
+    }
+
+    @Test
+    void testFraction() {
+        User userTest = new User("1", "Jordy", "Arrese", new ArrayList<Fraction>());
+        ArrayList<Fraction> listTest = new ArrayList<Fraction>();
+        listTest.add(new Fraction(1, 2));
+        userTest.setFractions(listTest);
+
+        assertEquals(listTest.get(0).getNumerator(), userTest.getFractions().get(0).getNumerator());
+        assertEquals(listTest.get(0).getDenominator(), userTest.getFractions().get(0).getDenominator());
+    }
+
+    @Test
+    void testFullName() {
+        User userTest = new User("1", "Jordy", "Arrese", new ArrayList<Fraction>());
+        assertEquals("Jordy Arrese", userTest.fullName());
     }
 
     @Test
