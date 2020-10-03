@@ -25,4 +25,12 @@ public class Searches {
                 .flatMap(user -> user.getFractions().stream())
                 .reduce(Fraction::divide).orElse(new Fraction());
     }
+
+    public Fraction findFirstProperFractionByUserId(String id) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getId() == id)
+                .flatMap(user -> user.getFractions().stream())
+                .filter(fraction -> fraction.isProper())
+                .findFirst().orElse(null);
+    }
 }
