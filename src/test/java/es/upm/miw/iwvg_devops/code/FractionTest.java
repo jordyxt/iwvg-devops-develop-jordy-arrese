@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FractionTest {
+class FractionTest {
 
     @Test
     void testFractionGetters() {
@@ -52,6 +52,14 @@ public class FractionTest {
         Fraction fractionTest2 = new Fraction(1, 2);
 
         assertEquals(true, fractionTest1.isEquivalent(fractionTest2));
+    }
+
+    @Test
+    void testIsNotEquivalent() {
+        Fraction fractionTest1 = new Fraction(1, 2);
+        Fraction fractionTest2 = new Fraction(2, 1);
+
+        assertEquals(false, fractionTest1.isEquivalent(fractionTest2));
     }
 
     @Test
